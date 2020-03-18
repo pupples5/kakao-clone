@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 400%;
+        background-color: red;
+      }
+      /* #boxOne {
+        height: 300px;
+        width: 300px;
+        background-color: yellow;
+        position: static; /*디폴트 static 
+      }
+
+      #boxTwo {
+        height: 300px;
+        width: 300px;
+        background-color: green;
+        position: fixed; /*디폴트 static 
+        left: 500px;
+        bottom: 30%;
+      } */
+      .abs-box {
+        width: 400px;
+        height: 400px;
+        background-color: yellow;
+        position: relative;
+      }
+      .abs-child {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+
+        /* absolute는 자기 부모 element 기반으로 위치를 정함
+           abs-box가 relative 포지션을 갖게 되면 자식인 abs-child는 부모 포지션 기반으로
+           poistion 계산해서 진행하는데 없으면 body 엘리먼트가 부모라서 그거 기반으로 포지션이
+           지정됨
+           
+        */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="boxOne">
+      <div class="box-child"></div>
+    </div>
+    <div id="boxTwo">
+      <div class="box-child"></div>
+    </div>
+    <div class="abs-box">
+      <div class="abs-child"></div>
+    </div>
+  </body>
+</html>

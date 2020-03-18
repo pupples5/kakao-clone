@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box {
+        background-color: red;
+        width: 150px;
+        height: 200px;
+        border: solid black;
+        display: inline-flex;
+      }
+      /* inline inline-block block 3가지가 존재하는데 inline의 경우 자기 컨텐츠크기까지만 적용
+        block은 width 지정한 크기만큼 엘리먼트 만드는데 자기 옆에 못오도록 함( 여기서는 200px높이에 width100% 영역만큼 크기를 가짐
+        inline-block은 block단위인데 자기옆에 누가 올 수 있음 (width가 150px만큼만 적용되는거라고 보면 됨 height도 200px)
+        )
+      */
+    </style>
+  </head>
+  <body>
+    <div class="box">3</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <box class="box">1</box>
+    <div></div>
+  </body>
+</html>
