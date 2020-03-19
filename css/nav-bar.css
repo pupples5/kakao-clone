@@ -1,0 +1,11 @@
+.nav {
+  background-color: #fcfcfc;
+
+  position: fixed;
+  width: 100%;
+  padding: 20px 50px;
+  bottom: 0px;
+  left: 0px;
+  border-top: 1px solid #f7f7f7;
+}
+/* 포지션 fixed를 할때에는 width를 항상 설정해줘야함 */
