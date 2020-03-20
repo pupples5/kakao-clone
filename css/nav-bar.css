@@ -7,5 +7,52 @@
   bottom: 0px;
   left: 0px;
   border-top: 1px solid #f7f7f7;
+  box-sizing: border-box;
+  /* box-sizing이 선택 영역 크기를 제한할 수 있음 
+  https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+  content-box를 하면 내가 포함한 컨텐츠만큼 크기를 정해버려서 화면밖에서 표시가 되는데
+  border-box를 하면 자기 부모의 크기만큼만 크기가 할당되서 그에 맞춰서 화면 배치가 이뤄짐
+  justify-content 해보면 일정크기 자동할당이라 이 문제가 생김
+  + html css가 기본적으로 300px 짜리 박스를 만들었는데 20px패딩을 넣으면
+  320px의 크기의 박스를 만들어서 표시해줌 이러면 화면크기가 300인 사람은 20px만큼은
+  화면에 표시가 안되는 것임 근데 border-box를 설정해주면
+  300px내에 20px짜리 패딩을 만드는거라 300px 크기를 맞춰주게됨 그래서 화면에 보임 
+  
+  
+  */
 }
 /* 포지션 fixed를 할때에는 width를 항상 설정해줘야함 */
+
+.nav .nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav i {
+  font-size: 20px;
+}
+
+/* 밑에 뱃지 파트 */
+
+.nav .nav__list-link {
+  position: relative;
+}
+
+/* absolute의 경우 position : static 아닌 부모를 기준으로 움직임
+위에서 link에 relative 안걸어주면 지금 nav class가 fixed로 되어있는
+가까운 부모라 얘 기준으로 위치를 잡게 됨
+*/
+.nav .nav__badge {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  color: white;
+  background-color: #dc5d46;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 10px;
+}
